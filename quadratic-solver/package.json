@@ -1,0 +1,62 @@
+{
+  "name": "quadratic-solver",
+  "version": "0.2.4",
+  "description": "Quadratic Equation Solver",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run lint && npm run babel && npm run pack && npm run lint",
+    "test": "npm run jest && codecov",
+    "jest": "jest --verbose",
+    "lint": "eslint --fix src/**/*.js lib/**/*.js dist/*.js",
+    "pack": "webpack",
+    "babel": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudiptog81/quadratic-solver.git"
+  },
+  "keywords": [
+    "quadratic",
+    "equation",
+    "solver",
+    "mathematics"
+  ],
+  "author": "Sudipto Ghosh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sudiptog81/quadratic-solver/issues"
+  },
+  "homepage": "https://github.com/sudiptog81/quadratic-solver",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.5",
+    "codecov": "^3.6.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.2.0",
+    "esm": "^3.2.25",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {},
+  "files": [
+    "package.json",
+    ".gitignore",
+    "LICENSE.md",
+    "README.md",
+    "dist/*",
+    "lib/**/*",
+    "src/**/*"
+  ],
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "/lib/",
+      "/dist/"
+    ]
+  },
+  "unpkg": "dist/quadratic-solver.js"
+}
